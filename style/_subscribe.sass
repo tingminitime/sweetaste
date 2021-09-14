@@ -1,0 +1,45 @@
+/* -- subscribe -- */
+.subscribe
+  padding: 30px 122px
+  +pad
+    padding: 30px
+    flex-direction: column
+  &__title
+    +pad
+      margin-bottom: 30px
+  &__titleText
+    +font(2)
+    letter-spacing: 1px
+    color: $lightGreen
+    margin-left: 20px
+  &__inputArea
+    position: relative
+    font-size: 0
+    min-width: 380px
+    +pad
+      min-width: 315px
+  &__mailIcon
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 20px
+  &__input
+    width: 100%
+    padding: 16px 16px 16px 60px
+    +font(1)
+    background-color: $lightGreen
+    border: 2px solid #fff
+    &:focus
+      outline: 2px solid $lightYellow
+  &__send
+    display: inline-block
+    width: 64px
+    height: 100%
+    position: absolute
+    right: 0
+    background-color: $lightYellow
+    border: none
+    cursor: pointer
+    padding: 0
+    &:hover
+      background-color: darken($lightYellow, 10%)

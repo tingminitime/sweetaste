@@ -1,0 +1,36 @@
+/* ---- logo ---- */
+.logo
+  &-main
+    background: url(../img/logo-all-dark.svg) no-repeat
+    text-indent: 101%
+    white-space: nowrap
+    overflow: hidden
+    width: 205px
+    height: 40px
+    vertical-align: middle
+    +pad
+      background-image: url(../img/logotype-sm-dark.svg)
+      width: 114px
+      height: 18px
+  &-sm
+    max-width: 40px
+    > img
+      width: 100%
+  &-lg
+    max-width: 172px
+
+/* ---- vertical title text ---- */
+.verticalTitle
+  writing-mode: vertical-rl
+  font-family: 'Noto Serif TC', serif
+  line-height: 1.5
+  letter-spacing: .2em
+  color: $darkGreen
+  &--sm
+    +font(2)
+  &--lg
+    +font(3)
+    +pad
+      margin: 0 auto
+      writing-mode: horizontal-tb
+      text-align: center

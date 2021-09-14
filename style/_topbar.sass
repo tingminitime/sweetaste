@@ -1,0 +1,106 @@
+/* ---- Cutomized spacing ---- */
+.topbar
+  padding: 30px 0
+  +pad
+    padding: 0
+
+/* ---- topbar ---- */
+.topbar
+  position: relative
+  background-color: #fff
+  +pad
+    position: fixed
+    top: 0
+    z-index: 2
+    width: 100%
+
+.menu
+  &__item
+    position: relative
+    &:before
+      content: ''
+      width: 50%
+      height: 3px
+      background-color: $darkGreen
+      position: absolute
+      bottom: -5px
+      left: 50%
+      transform: translateX(-50%)
+      opacity: 0
+      transition: opacity .2s
+    &:hover
+      &:before
+        opacity: 1
+  &__item-link
+    padding: 10px 30px
+    color: $darkGreen
+    +font(0)
+    &:hover
+      color: lighten($darkGreen, 25%)
+      > .cartIcon
+        transform: scale(1.6)
+  &__item-cart
+    margin: 0 -20px 0 20px
+  +pad
+    visibility: hidden
+    flex-direction: column
+    opacity: 0
+    transition: opacity .2s
+    position: absolute
+    left: 0
+    bottom: 0
+    transform: translateY(100%)
+    width: 100%
+    text-align: center
+    &__item
+      width: 100%
+      & + .menu__item
+        border-top: 2px solid #fff
+    &__item-link
+      padding: 20px 30px
+      letter-spacing: .1em
+      background-color: $darkGreen
+      color: #fff
+    &__item-cart
+      display: none
+
+.cart-text
+  display: none
+  +pad
+    display: inline-block
+
+.cart-mobile
+  display: none
+  +pad
+    display: block
+    padding: 30px
+
+.menuToggle
+  display: none
+  +pad
+    display: block
+    background: #fff
+    border: none
+    cursor: pointer
+    padding: 30px
+    > .menuIcon
+      width: 24px
+      height: 24px
+
+#menuToggleSwitch
+  position: absolute
+  opacity: 0
+  z-index: -1
+  &:checked + .menu
+    visibility: visible
+    opacity: 1
+
+.cartIcon
+  width: 16px
+  height: 16px
+  vertical-align: top
+  transform: scale(1.5)
+  +pad
+    width: 24px
+    height: 24px
+    transform: scale(1)
