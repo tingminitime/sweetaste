@@ -1306,21 +1306,16 @@ img {
 }
 
 .remember__checkbox {
+  background-image: url(../img/checkbox.svg);
+  background-repeat: no-repeat;
   position: relative;
   width: 16px;
   height: 16px;
   vertical-align: sub;
   display: inline-block;
-  background-image: url(../img/checkbox.svg);
-  background-repeat: no-repeat;
-}
-
-.remember__checkbox:after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
+  border: 1px solid #8DA291;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 /* ---- Member hover ---- */
@@ -1338,8 +1333,8 @@ img {
           filter: opacity(100%);
 }
 
-.login__member:hover .remember__checkbox:after {
-  content: none;
+.login__member:hover .remember__checkbox {
+  border: 1px solid #3F5D45;
 }
 
 .login__member:hover .member__loginBtn {

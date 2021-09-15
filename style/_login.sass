@@ -91,18 +91,14 @@
     padding-left: 8px
     color: $grayGreen
   &__checkbox
+    +backgroundImg($checkbox_uncheck)
     position: relative
     width: 16px
     height: 16px
     vertical-align: sub
     display: inline-block
-    +backgroundImg($checkbox_uncheck)
-    &:after
-      content: ''
-      position: absolute
-      width: 16px
-      height: 16px
-      background-color: #fff
+    border: 1px solid $grayGreen
+    transition: all .2s
 
 /* ---- Member hover ---- */
 .login__member
@@ -115,8 +111,7 @@
     .input__icon
       filter: opacity(100%)
     .remember__checkbox
-      &:after
-        content: none
+      border: 1px solid $darkGreen
     .member__loginBtn
       color: $darkGreen
       background-color: $lightYellow
