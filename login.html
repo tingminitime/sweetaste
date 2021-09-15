@@ -11,7 +11,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>Sweetaste - 首頁</title>
+  <title>Sweetaste - 登入</title>
   <link
     rel="stylesheet"
     href="style/all.css"
@@ -88,118 +88,77 @@
         </a>
       </div>
     </div>
-    <div class="header header__home"></div>
-    <ul class="feature flex-center">
-      <li class="feature__item feature__item-today">
-        <a
-          class="feature__item-link flex-center"
-          href="javascript:;"
-        ><span>本日精選</span></a>
-      </li>
-      <li class="feature__item feature__item-popularity">
-        <a
-          class="feature__item-link flex-center"
-          href="javascript:;"
-        ><span>人氣推薦</span></a>
-      </li>
-      <li class="feature__item feature__item-new">
-        <a
-          class="feature__item-link flex-center"
-          href="javascript:;"
-        ><span>新品上市</span></a>
-      </li>
-    </ul>
-  </div>
-  <div class="introduce">
-    <div class="container introduce__content flex-sb-start">
-      <h2 class="introduce__title verticalTitle verticalTitle--lg order-4 order-mb-1">為什麼———<br>　選擇了做甜點？</h2>
-      <p class="introduce__text order-3 order-mb-3">青山依舊在，幾度夕陽紅。慣看秋月春一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
-      </p>
-      <p class="introduce__text order-2 order-mb-4">是非成敗轉頭空，滾滾長江東逝水，白樵江渚上，古今多少事，都付笑談中。</p>
-      <div class="introduce__img introduce__img-1 order-1 order-mb-2"></div>
+    <div class="login flex-center">
+      <div class="login__member login__block">
+        <form class="member__form">
+          <legend class="member__title">會員登入</legend>
+          <div class="member__form-wrap">
+            <div class="member__inputArea">
+              <input
+                class="member__input member__account"
+                type="text"
+                placeholder="電子信箱／手機號碼"
+                required="required"
+              >
+              <div class="input__icon">
+                <img
+                  src="img/user-solid.svg"
+                  alt="user login icon"
+                >
+              </div>
+            </div>
+            <div class="member__inputArea">
+              <input
+                class="member__input member__password"
+                type="password"
+                placeholder="請輸入使用者密碼"
+              >
+              <div class="input__icon">
+                <img
+                  src="img/key-solid.svg"
+                  alt="user password icon"
+                >
+              </div>
+            </div>
+            <div class="member__remember">
+              <label class="remember__label">
+                <input type="checkbox">
+                <span class="remember__checkbox"></span>
+                <span class="remember__text">記住我</span>
+              </label>
+            </div>
+          </div>
+          <button
+            class="member__loginBtn"
+            type="submit"
+          >登入帳號</button>
+        </form>
+      </div>
+      <div class="login__social login__block flex-col">
+        <h2 class="social__title flex-center">連結社群帳號</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a
+              href="javascript:;"
+              class="social__item-link social__item-facebook"
+            ></a>
+          </li>
+          <li class="social__item">
+            <a
+              href="javascript:;"
+              class="social__item-link social__item-google"
+            ></a>
+          </li>
+          <li class="social__item">
+            <a
+              href="javascript:;"
+              class="social__item-link social__item-yahoo"
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="introduce">
-    <div class="container introduce__content flex-sb-start">
-      <h2 class="introduce__title verticalTitle verticalTitle--lg order-3 order-mb-1">為什麼———<br>　一定要吃甜點？</h2>
-      <p class="introduce__text order-2 order-mb-3">青山依舊在，幾度夕陽紅。慣看秋月春一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
-      </p>
-      <p class="introduce__text order-1 order-mb-4">是非成敗轉頭空，滾滾長江東逝水，白樵江渚上，古今多少事，都付笑談中。</p>
-      <div class="introduce__img introduce__img-2 order-4 order-mb-2"></div>
-    </div>
-  </div>
-  <div class="slogan verticalTitle verticalTitle--lg">想吃甜點———<br>　是不需要理由的。</div>
-  <ul class="container products__homePage products__list flex-center">
-    <li class="products__card">
-      <div class="featured"><span>本日精選</span></div>
-      <div class="addFavortire">
-        <img
-          src="img/favorite_border.png"
-          alt="add to favorite"
-        >
-      </div>
-      <div class="products__pic">
-        <img
-          src="img/p-2.png"
-          alt="product"
-        >
-      </div>
-      <div class="products__info flex-center">
-        <h3 class="products__name">焦糖馬卡龍</h3>
-        <span class="products__amount">NT$ 450</span>
-      </div>
-      <a
-        href="javascript:;"
-        class="products__addCart"
-      >加入購物車</a>
-    </li>
-    <li class="products__card">
-      <div class="featured"><span>本日精選</span></div>
-      <div class="addFavortire">
-        <img
-          src="img/favorite_border.png"
-          alt="add to favorite"
-        >
-      </div>
-      <div class="products__pic">
-        <img
-          src="img/p-5.png"
-          alt="product"
-        >
-      </div>
-      <div class="products__info flex-center">
-        <h3 class="products__name">焦糖馬卡龍</h3>
-        <span class="products__amount">NT$ 450</span>
-      </div>
-      <a
-        href="javascript:;"
-        class="products__addCart"
-      >加入購物車</a>
-    </li>
-    <li class="products__card">
-      <div class="featured"><span>本日精選</span></div>
-      <div class="addFavortire">
-        <img
-          src="img/favorite_border.png"
-          alt="add to favorite"
-        >
-      </div>
-      <div class="products__pic">
-        <img
-          src="img/p-7.jpg"
-          alt="product"
-        >
-      </div>
-      <div class="products__info flex-center">
-        <h3 class="products__name">焦糖馬卡龍</h3>
-        <span class="products__amount">NT$ 450</span>
-      </div>
-      <a
-        href="javascript:;"
-        class="products__addCart"
-      >加入購物車</a>
-    </li>
-  </ul>
   <div class="container-darkGreen">
     <div class="container subscribe mt-60 flex-sb-center">
       <div class="subscribe__title flex-center">
