@@ -2,6 +2,10 @@
   @media (max-width: 767px)
     @content
 
+@mixin desktop
+  @media (min-width: 768px)
+    @content
+
 @mixin font($level: 0, $weight: normal)
   font-size: font($level)
   font-weight: $weight

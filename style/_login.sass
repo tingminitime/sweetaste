@@ -10,24 +10,33 @@
   transition: all .3s
   filter: opacity(50%)
   opacity: 1
+  +pad
+    filter: opacity(100%)
 
 /* ---- Login ---- */
 .login
   margin: 30px 0 60px 0
   min-height: 380px
+  +pad
+    margin: 84px 0 0 0
+    min-height: auto
   &__block
     flex-basis: 390px
     height: 350px
     transition: all .2s
-    &:hover
-      height: 380px
-      background-color: $darkGreen
-  &__member
     background-color: $lightGreen
+    +desktop
+      &:hover
+        height: 380px
+        background-color: $darkGreen
+    +pad
+      background-color: $darkGreen
+      height: auto
+  &__member
     position: relative
-    margin-right: 5px
   &__social
     padding: 40px 30px
+    margin-left: 5px
 
 /* ---- Member ---- */
 .member
@@ -42,6 +51,8 @@
     line-height: 1.5
     user-select: none
     transition: all .2s
+    +pad
+      color: $lightGreen
   &__inputArea
     margin-bottom: 16px
     position: relative
@@ -51,6 +62,8 @@
     padding: 16px 16px 16px 64px
     border: none
     transition: all .3s .1s
+    +pad
+      background-color: $lightGreen
     &:focus
       padding: 16px
       outline: 2px solid $lightYellow
@@ -75,6 +88,10 @@
     transition: all .2s
     position: absolute
     bottom: 0
+    +pad
+      position: relative
+      color: $darkGreen
+      background-color: $lightYellow
 
 .remember
   &__label
@@ -90,6 +107,8 @@
     +font(0)
     padding-left: 8px
     color: $grayGreen
+    +pad
+      color: $lightGreen
   &__checkbox
     +backgroundImg($checkbox_uncheck)
     position: relative
@@ -102,25 +121,30 @@
 
 /* ---- Member hover ---- */
 .login__member
-  &:hover
-    .member__title
-      color: $lightGreen
-      padding: 40px 0
-    .member__input
-      background-color: $lightGreen
-    .input__icon
-      filter: opacity(100%)
-    .remember__checkbox
-      border: 1px solid $darkGreen
-    .member__loginBtn
-      color: $darkGreen
-      background-color: $lightYellow
-      &:hover
-        background-color: darken($lightYellow, 10%)
+  +desktop
+    &:hover
+      .member__title
+        color: $lightGreen
+        padding: 40px 0
+      .member__input
+        background-color: $lightGreen
+      .input__icon
+        filter: opacity(100%)
+      .remember__checkbox
+        border: 1px solid $darkGreen
+      .remember__text
+        color: $lightGreen
+      .member__loginBtn
+        color: $darkGreen
+        background-color: $lightYellow
+        &:hover
+          background-color: darken($lightYellow, 10%)
 
 /* ---- Social ---- */
 .login__social
   background-color: $lightGreen
+  +pad
+    display: none
 .social
   &__title
     +font(2)
@@ -138,20 +162,39 @@
       margin-right: .5em
     &:after
       margin-left: .5em
+  &__list
+    +pad
+      padding: 30px
+      margin-bottom: 30px
+      background: $lightGreen
+    &-pad
+      display: none
+      +pad
+        display: flex
   &__item
+    width: 100%
     background-color: #fff
     transition: all .2s
-    &-facebook
-      +backgroundImg($facebook_logo)
-    &-google
-      +backgroundImg($google_logo)
-    &-yahoo
-      +backgroundImg($yahoo_logo)
     &-link
       height: 56px
       background-position: center
+    &-facebook
+      +backgroundImg($facebook_logo)
+      +pad
+        +backgroundImg($facebook_logo_pad)
+    &-google
+      +backgroundImg($google_logo)
+      +pad
+        +backgroundImg($google_logo_pad)
+        background-position: center 60%
+    &-yahoo
+      +backgroundImg($yahoo_logo)
+      +pad
+        +backgroundImg($yahoo_logo_pad)
     & + .social__item
-      margin-top: 16px
+      margin: 16px 0 0 0
+      +pad
+        margin: 0 0 0 1px
 
 /* ---- Social hover ---- */
 .login__social
