@@ -1,0 +1,158 @@
+.content__cartPage
+  margin: 30px 0 40px 0
+  +pad
+    margin: 84px 0 0 0
+    flex-direction: column
+    align-items: stretch
+
+.cart
+  flex-basis: 620px
+  margin-right: 20px
+  +pad
+    flex-basis: auto
+    margin-right: 0
+  &__title
+    +font(2, 700)
+    padding: 16px 0
+    margin-bottom: 13px
+    color: $darkGreen
+    background-color: $lightGreen
+    text-align: center
+    line-height: 1.5
+    +pad
+      margin-bottom: 30px
+  &__item
+    padding: 20px 0
+    +pad
+      flex-wrap: wrap
+      justify-content: center
+      padding: 0
+      margin-bottom: 30px
+    & + .cart__item
+      border-top: 1px solid $lightGreen
+      +pad
+        border-top: none
+  &__prodPic
+    max-width: 110px
+    +pad
+      margin-right: 16px
+      width: 157px
+      max-width: 100%
+      height: 106px
+      overflow: hidden
+      position: relative
+      > img
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+  &__content
+    flex-basis: 290px
+    +pad
+      flex-basis: auto
+      flex-direction: column
+  &__info
+    color: $darkGreen
+    line-height: 1.5
+  &__prodName
+    +font(1, 300)
+  &__prodPrice
+    +font(0, 300)
+  &__prodCount
+    border: 1px solid $lightGreen
+    > button, .prodCount__number
+      width: 48px
+      line-height: 48px
+      color: $darkGreen
+    > button
+      cursor: pointer
+      background-color: transparent
+      border: none
+      &:hover
+        color: #fff
+        background-color: $darkGreen
+    > .prodCount__number
+      text-align: center
+      border-left: 1px solid $lightGreen
+      border-right: 1px solid $lightGreen
+  &__amount
+    +font(1, 500)
+    color: $darkGreen
+    line-height: 1.5
+    +pad
+      padding: 8px 0
+      margin: 8px 30px 0 30px
+      width: 100%
+      text-align: right
+      border-top: 1px solid $lightGreen
+      border-bottom: 1px solid $lightGreen
+    span
+      display: inline-block
+  &__delete
+    +backgroundImg($deleteIcon)
+    background-position: center
+    background-size: 60% 60%
+    width: 24px
+    height: 24px
+    background-color: transparent
+    border: none
+    cursor: pointer
+    transition: .2s
+    +pad
+      display: none
+    &:hover
+      transform: scale(1.3)
+
+.order
+  flex-basis: 300px
+  background-color: $darkGreen
+  +pad
+    flex-basis: auto
+    background-color: transparent
+  &__title
+    +font(2, 700)
+    padding: 16px 0
+    color: $lightGreen
+    text-align: center
+    line-height: 1.5
+    +pad
+      margin: 0 30px
+      color: $darkGreen
+      background-color: $lightGreen
+  &__summary
+    margin: 0 20px 0 20px
+    padding: 16px 0
+    border-top: 1px solid $lightGreen
+    +pad
+      margin: 0 30px 0 30px
+      border-top: none
+  &__item
+    +font(0, 300)
+    color: $lightGreen
+    line-height: 1.5
+    & + .order__item
+      margin-top: 8px
+    +pad
+      color: $darkGreen
+    span
+      display: inline-block
+  &__total
+    +font(1, 500)
+    margin: 0 20px 16px 20px
+    color: $lightGreen
+    line-height: 1.5
+    +pad
+      margin: 0 30px 16px 30px
+      color: $darkGreen
+    span
+      display: inline-block
+  &__checkout
+    +font(2, 700)
+    padding: 16px 0
+    width: 100%
+    color: $darkGreen
+    background-color: $lightYellow
+    border: none
+    cursor: pointer
+    &:hover
+      background-color: darken($lightYellow, 10%)
