@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Sweetaste - 運送</title>
+  <link
+    rel="stylesheet"
+    href="style/all.css"
+  >
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar flex-sb-center">
+      <label
+        class="menuToggle"
+        for="menuToggleSwitch"
+      >
+        <img
+          src="img/menu_icon.svg"
+          alt="menu"
+          class="menuIcon"
+        >
+      </label>
+      <h1>
+        <a
+          href="index.html"
+          class="logo-main"
+        >Sweetaste
+        </a>
+      </h1>
+      <input
+        id="menuToggleSwitch"
+        type="checkbox"
+      >
+      <ul class="menu flex-sb-center">
+        <li class="menu__item">
+          <a
+            class="menu__item-link"
+            href="index.html"
+          >首頁</a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="menu__item-link"
+            href="products.html"
+          >甜點</a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="menu__item-link"
+            href="login.html"
+          >登入</a>
+        </li>
+        <li class="menu__item menu__item-cart">
+          <a
+            class="menu__item-link"
+            href="cart.html"
+          >
+            <img
+              class="cartIcon"
+              src="img/shopping-cart-solid.svg"
+              alt="cart"
+            >
+            <span class="cart-text">購物車</span>
+          </a>
+        </li>
+      </ul>
+      <div class="cart-mobile">
+        <a
+          class="cart-mobile-link"
+          href="cart.html"
+        >
+          <img
+            class="cartIcon"
+            src="img/shopping-cart-solid.svg"
+            alt="cart"
+          >
+        </a>
+      </div>
+    </div>
+    <div class="content__deliveryPage flex-center-start">
+      <form
+        class="orderProcess"
+        action="payment.html"
+      >
+        <div class="orderProcess__title flex-sb-end">
+          <legend class="orderProcess__titleText">運送</legend>
+          <div class="orderProcess__processBar">
+            <img
+              src="img/bar_delivery.svg"
+              alt="process bar"
+            >
+          </div>
+        </div>
+        <div class="orderProcess__inputArea flex-sb">
+          <label class="orderProcess__input orderProcess__input-half">
+            <div class="orderProcess__labelText">姓氏</div>
+            <input
+              type="text"
+              class="lastName"
+              placeholder="王"
+              required
+            >
+          </label>
+          <label class="orderProcess__input orderProcess__input-half">
+            <div class="orderProcess__labelText">名字</div>
+            <input
+              type="text"
+              class="firstName"
+              placeholder="小明"
+              required
+            >
+          </label>
+          <label class="orderProcess__input orderProcess__input-full">
+            <div class="orderProcess__labelText">電話</div>
+            <input
+              type="text"
+              class="tel"
+              placeholder="0912-345-678"
+              required
+            >
+          </label>
+          <label class="orderProcess__select orderProcess__clientAddress flex-sb">
+            <div class="orderProcess__labelText">地址</div>
+            <select
+              name="city"
+              class="city"
+              required
+            >
+              <option
+                value="請選擇"
+                selected
+              >請選擇</option>
+              <option value="高雄市">高雄市</option>
+              <option value="台北市">台北市</option>
+            </select>
+            <select
+              name="district"
+              class="district"
+              required
+            >
+              <option
+                value="請選擇"
+                selected
+              >請選擇</option>
+              <option value="新興區">新興區</option>
+              <option value="新興區">苓雅區</option>
+            </select>
+            <input
+              type="text"
+              class="road"
+              placeholder="幸福路 520 號"
+              required
+            >
+          </label>
+        </div>
+        <input
+          class="orderProcess__nextButton"
+          type="submit"
+          value="下一步"
+        >
+      </form>
+      <div class="detail">
+        <div class="orderSummary">
+          <h2 class="orderSummary__title">訂單摘要</h2>
+          <ul class="orderSummary__summary">
+            <li class="orderSummary__item flex-sb">
+              <div class="orderSummary__itemName">小計</div>
+              <div>
+                <span class="unit">NT$ </span>
+                <span class="orderSummary__itemAmount">2,700</span>
+              </div>
+            </li>
+            <li class="orderSummary__item flex-sb">
+              <div class="orderSummary__itemName">運費</div>
+              <div>
+                <span class="unit">NT$ </span>
+                <span class="orderSummary__itemAmount">300</span>
+              </div>
+            </li>
+          </ul>
+          <div class="orderSummary__total flex-sb">
+            <div>總計</div>
+            <div>
+              <span class="unit">NT$ </span>
+              <span class="orderSummary__totalAmount">3,000</span>
+            </div>
+          </div>
+        </div>
+        <div class="shop">
+          <h2 class="shop__title">購物清單</h2>
+          <ul class="shop__list">
+            <li class="shop__item flex-start-center">
+              <div class="shop__prodPic">
+                <img
+                  src="img/p-8.jpg"
+                  alt="cart product picture"
+                >
+              </div>
+              <div class="shop__info">
+                <h3 class="shop__prodName">
+                  焦糖馬卡龍
+                  <span class="prodCount">(2)</span>
+                </h3>
+                <div class="shop__prodPrice">
+                  <span class="unit">NT$ </span>
+                  <span class="shop__priceNumber">900</span>
+                </div>
+              </div>
+            </li>
+            <li class="shop__item flex-start-center">
+              <div class="shop__prodPic">
+                <img
+                  src="img/p-5.png"
+                  alt="cart product picture"
+                >
+              </div>
+              <div class="shop__info">
+                <h3 class="shop__prodName">
+                  焦糖馬卡龍
+                  <span class="prodCount">(2)</span>
+                </h3>
+                <div class="shop__prodPrice">
+                  <span class="unit">NT$ </span>
+                  <span class="shop__priceNumber">900</span>
+                </div>
+              </div>
+            </li>
+            <li class="shop__item flex-start-center">
+              <div class="shop__prodPic"><img
+                  src="img/p-3.png"
+                  alt="cart product picture"
+                ></div>
+              <div class="shop__info">
+                <h3 class="shop__prodName">
+                  焦糖馬卡龍
+                  <span class="prodCount">(2)</span>
+                </h3>
+                <div class="shop__prodPrice">
+                  <span class="unit">NT$ </span>
+                  <span class="shop__priceNumber">900</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-darkGreen">
+    <div class="container subscribe mt-60 flex-sb-center">
+      <div class="subscribe__title flex-center">
+        <div class="logo-sm">
+          <img
+            src="img/logo-light.svg"
+            alt="logo"
+          >
+        </div>
+        <span class="subscribe__titleText">訂閱你我的甜蜜郵件</span>
+      </div>
+      <div class="subscribe__inputArea">
+        <div class="subscribe__mailIcon">
+          <img
+            src="img/mail-24px.png"
+            alt="mail icon"
+          >
+        </div>
+        <input
+          type="mail"
+          class="subscribe__input"
+          required="required"
+          name="mailInput"
+        >
+        <button class="subscribe__send">
+          <img
+            src="img/arrow_forward-24px.png"
+            alt="subscribe button"
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-lightGreen">
+    <div class="container footer">
+      <div class="footer__content flex-sb">
+        <div class="footer__leftInfo flex-sb flex-col">
+          <div class="footer__logo logo-lg">
+            <img
+              src="img/logotype-lg-dark.svg"
+              alt="footer logo"
+            >
+          </div>
+          <div class="footer__contact flex flex-col">
+            <a
+              href="tel:+886712345678"
+              class="footer__contact-link"
+            >07-1234-5678</a>
+            <a
+              href="mailto:sweetaste@email.com"
+              class="footer__contact-link"
+            >sweetaste@email.com
+            </a>
+            <span class="contactAddress">800 高雄市新興區幸福路 520 號</span>
+          </div>
+        </div>
+        <div class="footer__rightInfo">
+          <p class="verticalTitle verticalTitle--sm">今天是個———<br>　吃甜點的好日子。</p>
+        </div>
+      </div>
+      <div class="footer__bottomInfo flex-sb-end">
+        <ul class="footer__media flex">
+          <li>
+            <a href="javascript:;">
+              <img
+                src="img/ic-line@.png"
+                alt="Line"
+              >
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <img
+                src="img/ic-facebook.png"
+                alt="Facebook"
+              >
+            </a>
+          </li>
+        </ul>
+        <span class="footer__copyright">© 2018 Sweetaste* All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

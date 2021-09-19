@@ -1,3 +1,4 @@
+/* ---- Cutomized spacing ---- */
 .content__cartPage
   margin: 30px 0 40px 0
   +pad
@@ -5,12 +6,11 @@
     flex-direction: column
     align-items: stretch
 
+/* ---- Cart ---- */
 .cart
   flex-basis: 620px
-  margin-right: 20px
   +pad
     flex-basis: auto
-    margin-right: 0
   &__title
     +font(2, 700)
     padding: 16px 0
@@ -33,27 +33,24 @@
       +pad
         border-top: none
   &__prodPic
-    max-width: 110px
+    width: 110px
+    height: 110px
+    > img
+      width: 100%
+      height: 100%
+      object-fit: cover
     +pad
       margin-right: 16px
       width: 157px
-      max-width: 100%
       height: 106px
-      overflow: hidden
-      position: relative
-      > img
-        position: absolute
-        left: 0
-        top: 50%
-        transform: translateY(-50%)
   &__content
     flex-basis: 290px
     +pad
       flex-basis: auto
       flex-direction: column
   &__info
-    color: $darkGreen
     line-height: 1.5
+    color: $darkGreen
   &__prodName
     +font(1, 300)
   &__prodPrice
@@ -103,6 +100,7 @@
     &:hover
       transform: scale(1.3)
 
+/* ---- Order ---- */
 .order
   flex-basis: 300px
   background-color: $darkGreen
@@ -126,10 +124,11 @@
     +pad
       margin: 0 30px 0 30px
       border-top: none
-  &__item
-    +font(0, 300)
+  &__item, &__total
     color: $lightGreen
     line-height: 1.5
+  &__item
+    +font(0, 300)
     & + .order__item
       margin-top: 8px
     +pad
@@ -139,8 +138,6 @@
   &__total
     +font(1, 500)
     margin: 0 20px 16px 20px
-    color: $lightGreen
-    line-height: 1.5
     +pad
       margin: 0 30px 16px 30px
       color: $darkGreen
