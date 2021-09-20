@@ -11,7 +11,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>Sweetaste - 運送</title>
+  <title>Sweetaste - 付款</title>
   <link
     rel="stylesheet"
     href="style/all.css"
@@ -86,6 +86,191 @@
             alt="cart"
           >
         </a>
+      </div>
+    </div>
+    <div class="content__deliveryPage flex-center-start">
+      <form
+        class="orderProcess"
+        action="payment.html"
+      >
+        <div class="orderProcess__title flex-sb-end">
+          <legend class="orderProcess__titleText">付款</legend>
+          <div class="orderProcess__processBar">
+            <img
+              src="img/bar_payment.svg"
+              alt="process bar"
+            >
+          </div>
+        </div>
+        <div class="orderProcess__inputArea flex-sb">
+          <label class="orderProcess__label orderProcess__label-full">
+            <div class="orderProcess__labelText">信用卡卡號</div>
+            <input
+              type="text"
+              class="orderProcess__input orderProcess__input-creditCard"
+              placeholder="9012-3456-7890-1234"
+              required
+            >
+          </label>
+          <label class="orderProcess__label orderProcess__label-full flex-sb">
+            <div class="orderProcess__labelText">持卡人姓名</div>
+            <input
+              type="text"
+              class="orderProcess__input-half"
+              placeholder="王"
+              required
+            >
+            <input
+              type="text"
+              class="orderProcess__input-half"
+              placeholder="小明"
+              required
+            >
+          </label>
+          <label class="orderProcess__label orderProcess__label-full flex-sb">
+            <div class="orderProcess__labelText">有效期限</div>
+            <select
+              name="month"
+              required
+            >
+              <option
+                value="月"
+                selected
+              >月</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select
+              name="year"
+              required
+            >
+              <option
+                value="年"
+                selected
+              >年</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+            </select>
+          </label>
+          <label class="orderProcess__label orderProcess__label-half">
+            <div class="orderProcess__labelText">背面末三碼</div>
+            <input
+              type="text"
+              class="orderProcess__input-half"
+              placeholder="123"
+              required
+            >
+          </label>
+        </div>
+        <input
+          class="orderProcess__nextButton"
+          type="submit"
+          value="下一步"
+        >
+      </form>
+      <div class="detail">
+        <div class="orderSummary">
+          <h2 class="orderSummary__title">訂單摘要</h2>
+          <ul class="orderSummary__summary">
+            <li class="orderSummary__item flex-sb">
+              <div class="orderSummary__itemName">小計</div>
+              <div>
+                <span class="unit">NT$ </span>
+                <span class="orderSummary__itemAmount">2,700</span>
+              </div>
+            </li>
+            <li class="orderSummary__item flex-sb">
+              <div class="orderSummary__itemName">運費</div>
+              <div>
+                <span class="unit">NT$ </span>
+                <span class="orderSummary__itemAmount">300</span>
+              </div>
+            </li>
+          </ul>
+          <div class="orderSummary__total flex-sb">
+            <div>總計</div>
+            <div>
+              <span class="unit">NT$ </span>
+              <span class="orderSummary__totalAmount">3,000</span>
+            </div>
+          </div>
+        </div>
+        <div class="shop">
+          <h2 class="shop__title">購物清單</h2>
+          <ul class="shop__list">
+            <li class="shop__item flex-start-center">
+              <div class="shop__prodPic">
+                <img
+                  src="img/p-8.jpg"
+                  alt="cart product picture"
+                >
+              </div>
+              <div class="shop__info">
+                <h3 class="shop__prodName">
+                  焦糖馬卡龍
+                  <span class="prodCount">(2)</span>
+                </h3>
+                <div class="shop__prodPrice">
+                  <span class="unit">NT$ </span>
+                  <span class="shop__priceNumber">900</span>
+                </div>
+              </div>
+            </li>
+            <li class="shop__item flex-start-center">
+              <div class="shop__prodPic">
+                <img
+                  src="img/p-5.png"
+                  alt="cart product picture"
+                >
+              </div>
+              <div class="shop__info">
+                <h3 class="shop__prodName">
+                  焦糖馬卡龍
+                  <span class="prodCount">(2)</span>
+                </h3>
+                <div class="shop__prodPrice">
+                  <span class="unit">NT$ </span>
+                  <span class="shop__priceNumber">900</span>
+                </div>
+              </div>
+            </li>
+            <li class="shop__item flex-start-center">
+              <div class="shop__prodPic"><img
+                  src="img/p-3.png"
+                  alt="cart product picture"
+                ></div>
+              <div class="shop__info">
+                <h3 class="shop__prodName">
+                  焦糖馬卡龍
+                  <span class="prodCount">(2)</span>
+                </h3>
+                <div class="shop__prodPrice">
+                  <span class="unit">NT$ </span>
+                  <span class="shop__priceNumber">900</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

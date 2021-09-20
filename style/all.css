@@ -6,6 +6,7 @@
 /* ------ Social ------ */
 /* ------ Delete ------ */
 /* ------ Select icon ------ */
+/* ------ Input icon ------ */
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
@@ -107,6 +108,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .flex-center {
@@ -1876,6 +1882,16 @@ img {
   }
 }
 
+.input-half {
+  max-width: 186px;
+}
+
+@media (max-width: 767px) {
+  .input-half {
+    max-width: 153px;
+  }
+}
+
 /* ---- Order process ---- */
 .orderProcess {
   max-width: 460px;
@@ -1940,7 +1956,6 @@ img {
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 16px 16px;
-  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -1954,30 +1969,43 @@ img {
   outline: none;
 }
 
-.orderProcess__input {
-  display: inline-block;
+.orderProcess__label {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 16px;
 }
 
-.orderProcess__input-full {
+.orderProcess__label-full {
   width: 100%;
 }
 
-.orderProcess__input-half {
+.orderProcess__label-half {
   -ms-flex-preferred-size: 186px;
       flex-basis: 186px;
 }
 
 @media (max-width: 767px) {
-  .orderProcess__input-half {
+  .orderProcess__label-half {
     -ms-flex-preferred-size: 153px;
         flex-basis: 153px;
   }
 }
 
-.orderProcess__select {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.orderProcess__input-half {
+  max-width: 186px;
+}
+
+@media (max-width: 767px) {
+  .orderProcess__input-half {
+    max-width: 153px;
+  }
+}
+
+.orderProcess__input-creditCard {
+  background-image: url(../img/credit-card.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px 20px;
 }
 
 .orderProcess__title {

@@ -9,6 +9,12 @@
   +pad
     display: none
 
+.input
+  &-half
+    max-width: 186px
+    +pad
+      max-width: 153px
+
 /* ---- Order process ---- */
 .orderProcess
   max-width: 460px
@@ -40,13 +46,12 @@
     +backgroundImg($selectIcon)
     background-position: right 20px center
     background-size: 16px 16px
-    position: relative
     +pad
       flex-basis: 153px
     &:focus
       outline: none
-  &__input
-    display: inline-block
+  &__label
+    flex-wrap: wrap
     margin-bottom: 16px
     &-full
       width: 100%
@@ -54,8 +59,15 @@
       flex-basis: 186px
       +pad
         flex-basis: 153px
-  &__select
-    flex-wrap: wrap
+  &__input
+    &-half
+      max-width: 186px
+      +pad
+        max-width: 153px
+    &-creditCard
+      +backgroundImg($creditCardIcon)
+      background-position: right 20px center
+      background-size: 20px 20px
   &__title
     padding: 30px 40px
     line-height: 50px
