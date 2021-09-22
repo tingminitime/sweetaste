@@ -11,10 +11,10 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>Sweetaste - 登入</title>
+  <title>Sweetaste - 付款成功</title>
   <link
     rel="stylesheet"
-    href="style/all.css"
+    href="../style/all.css"
   >
 </head>
 
@@ -26,14 +26,14 @@
         for="menuToggleSwitch"
       >
         <img
-          src="img/menu_icon.svg"
+          src="../img/menu_icon.svg"
           alt="menu"
           class="menuIcon"
         >
       </label>
       <h1>
         <a
-          href="index.html"
+          href="../index.html"
           class="logo-main"
         >Sweetaste
         </a>
@@ -46,7 +46,7 @@
         <li class="menu__item">
           <a
             class="menu__item-link"
-            href="index.html"
+            href="../index.html"
           >首頁</a>
         </li>
         <li class="menu__item">
@@ -68,7 +68,7 @@
           >
             <img
               class="cartIcon"
-              src="img/shopping-cart-solid.svg"
+              src="../img/shopping-cart-solid.svg"
               alt="cart"
             >
             <span class="cart-text">購物車</span>
@@ -82,110 +82,36 @@
         >
           <img
             class="cartIcon"
-            src="img/shopping-cart-solid.svg"
+            src="../img/shopping-cart-solid.svg"
             alt="cart"
           >
         </a>
       </div>
     </div>
-    <div class="login flex-center">
-      <div class="login__member login__block">
-        <form class="member__form">
-          <legend class="member__title">會員登入</legend>
-          <ul class="social__list social__list-pad flex-center">
-            <li class="social__item">
-              <a
-                href="javascript:;"
-                class="social__item-link social__item-facebook"
-              ></a>
-            </li>
-            <li class="social__item">
-              <a
-                href="javascript:;"
-                class="social__item-link social__item-google"
-              ></a>
-            </li>
-            <li class="social__item">
-              <a
-                href="javascript:;"
-                class="social__item-link social__item-yahoo"
-              ></a>
-            </li>
-          </ul>
-          <div class="member__form-wrap">
-            <div class="member__inputArea">
-              <input
-                class="member__input member__account"
-                type="text"
-                placeholder="電子信箱／手機號碼"
-                required
-              >
-              <div class="input__icon">
-                <img
-                  src="img/user-solid.svg"
-                  alt="user login icon"
-                >
-              </div>
-            </div>
-            <div class="member__inputArea">
-              <input
-                class="member__input member__password"
-                type="password"
-                placeholder="請輸入使用者密碼"
-                required
-              >
-              <div class="input__icon">
-                <img
-                  src="img/key-solid.svg"
-                  alt="user password icon"
-                >
-              </div>
-            </div>
-            <div class="member__remember inputCheckbox">
-              <label class="inputCheckbox__label">
-                <input type="checkbox">
-                <span class="inputCheckbox__icon remember__checkbox"></span>
-                <span class="inputCheckbox__text remember__text">記住我</span>
-              </label>
-            </div>
-          </div>
-          <button
-            class="member__loginBtn"
-            type="submit"
-          >登入帳號</button>
-        </form>
+    <div class="header header__paymentSuccess flex-col flex-center">
+      <div class="orderProcess__processBar-success">
+        <img
+          src="../img/bar_payment_success.svg"
+          alt="process bar"
+        >
       </div>
-      <div class="login__social login__block flex-col">
-        <h2 class="social__title flex-center">連結社群帳號</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a
-              href="javascript:;"
-              class="social__item-link social__item-facebook"
-            ></a>
-          </li>
-          <li class="social__item">
-            <a
-              href="javascript:;"
-              class="social__item-link social__item-google"
-            ></a>
-          </li>
-          <li class="social__item">
-            <a
-              href="javascript:;"
-              class="social__item-link social__item-yahoo"
-            ></a>
-          </li>
-        </ul>
-      </div>
+      <h2 class="paymentSuccess__title">付款成功</h2>
+      <a
+        class="paymentSuccess__goToShopping-lg"
+        href="products.html"
+      >繼續逛逛</a>
     </div>
+    <a
+      class="paymentSuccess__goToShopping-sm"
+      href="products.html"
+    >繼續逛逛</a>
   </div>
   <div class="container-darkGreen">
     <div class="container subscribe mt-60 flex-sb-center">
       <div class="subscribe__title flex-center">
         <div class="logo-sm">
           <img
-            src="img/logo-light.svg"
+            src="../img/logo-light.svg"
             alt="logo"
           >
         </div>
@@ -194,7 +120,7 @@
       <div class="subscribe__inputArea">
         <div class="subscribe__mailIcon">
           <img
-            src="img/mail-24px.png"
+            src="../img/mail-24px.png"
             alt="mail icon"
           >
         </div>
@@ -206,7 +132,7 @@
         >
         <button class="subscribe__send">
           <img
-            src="img/arrow_forward-24px.png"
+            src="../img/arrow_forward-24px.png"
             alt="subscribe button"
           >
         </button>
@@ -219,7 +145,7 @@
         <div class="footer__info flex-sb flex-col">
           <div class="footer__logo logo-lg">
             <img
-              src="img/logotype-lg-dark.svg"
+              src="../img/logotype-lg-dark.svg"
               alt="footer logo"
             >
           </div>
@@ -245,7 +171,7 @@
           <li>
             <a href="javascript:;">
               <img
-                src="img/ic-line@.png"
+                src="../img/ic-line@.png"
                 alt="Line"
               >
             </a>
@@ -253,7 +179,7 @@
           <li>
             <a href="javascript:;">
               <img
-                src="img/ic-facebook.png"
+                src="../img/ic-facebook.png"
                 alt="Facebook"
               >
             </a>

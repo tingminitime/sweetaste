@@ -57,6 +57,7 @@ table {
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 1px solid rgba(255, 0, 0, 0.25);
 }
 
 body {
@@ -928,8 +929,12 @@ img {
 
 @media (max-width: 767px) {
   .products__homePage {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
+}
+
+.products__homePage .products__card {
+  margin: 0 0 20px 0;
 }
 
 .products__homePage .products__card + .products__card {
