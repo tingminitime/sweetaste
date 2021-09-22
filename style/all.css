@@ -57,7 +57,6 @@ table {
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 1px solid rgba(255, 0, 0, 0.25);
 }
 
 body {
@@ -452,9 +451,8 @@ img {
   font-size: 20px;
   font-weight: normal;
   padding: 18px 0;
-  -webkit-box-flex: 1.5;
-      -ms-flex: 1.5;
-          flex: 1.5;
+  -ms-flex-preferred-size: 173px;
+      flex-basis: 173px;
   border-left: 1px solid #EAF0ED;
   border-right: 1px solid #EAF0ED;
   background-color: #fff;
@@ -463,9 +461,8 @@ img {
 .products__amount {
   font-size: 20px;
   font-weight: 500;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex-preferred-size: 127px;
+      flex-basis: 127px;
   border-right: 1px solid #EAF0ED;
   background-color: #fff;
 }
