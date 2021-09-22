@@ -1,6 +1,6 @@
 /* ---- Cutomized spacing ---- */
-.content__deliveryPage
-  margin: 30px 0
+.content__paymentProcess
+  margin: 30px 0 60px 0
   +pad
     margin: 84px 0 0 0
 
@@ -9,6 +9,7 @@
   +pad
     display: none
 
+/* ---- Payment process input setting ---- */
 .input
   &-half
     max-width: 186px
@@ -50,6 +51,15 @@
       flex-basis: 153px
     &:focus
       outline: none
+  &__inputArea
+    padding: 0 40px
+    flex-wrap: wrap
+    +pad
+      padding: 0 30px
+    &-eInvoice
+      display: flex
+    &-postInvoice
+      display: none
   &__label
     flex-wrap: wrap
     margin-bottom: 16px
@@ -75,20 +85,21 @@
       padding: 30px
   &__titleText
     +font(5, 500)
-    flex: 1
     margin-right: 8px
-  &__inputArea
-    padding: 0 40px
-    flex-wrap: wrap
-    +pad
-      padding: 0 30px
   &__labelText
     +font(1, 500)
     width: 100%
     margin-bottom: 8px
     line-height: 1.5
   &__processBar
-    flex: 1
+    flex-grow: 0
+    flex-basis: 186px
+    +pad
+      flex-basis: 153px
+    &-success
+      min-width: 190px
+      margin-bottom: 30px
+
   &__nextButton
     +font(2, 700)
     margin-top: 30px
@@ -151,3 +162,36 @@
     +font(0, 300)
   &__prodPrice
     +font(1, 500)
+
+.invoiceSwitch
+  +font(1, 500)
+  margin: 0 40px 30px 40px
+  text-align: center
+  cursor: pointer
+  +pad
+    margin: 0 30px 30px 30px
+  &-e, &-post
+    padding: 14px 0
+    width: 100%
+    border: 1px solid $lightGreen
+    user-select: none
+  &-e
+    color: $darkGreen
+    background-color: $lightGreen
+
+#invoiceToggle
+  position: absolute
+  opacity: 0
+  z-index: -1
+  &:checked
+    & ~ .orderProcess__inputArea-eInvoice
+      display: none
+    & ~ .orderProcess__inputArea-postInvoice
+      display: flex
+    & ~ .invoiceSwitch
+      > .invoiceSwitch-e
+        color: $lightGreen
+        background-color: transparent
+      > .invoiceSwitch-post
+        color: $darkGreen
+        background-color: $lightGreen

@@ -4,7 +4,7 @@
 /* ------ Banner ------ */
 /* ------ Checkbox ------ */
 /* ------ Social ------ */
-/* ------ Delete ------ */
+/* ------ Delete icon ------ */
 /* ------ Select icon ------ */
 /* ------ Input icon ------ */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -358,6 +358,11 @@ img {
   }
 }
 
+.products__list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 @media (max-width: 767px) {
   .products__list {
     -webkit-box-pack: center;
@@ -367,6 +372,7 @@ img {
 }
 
 .products__card {
+  margin: 0 0 20px 20px;
   max-width: 300px;
   position: relative;
   text-align: center;
@@ -407,6 +413,7 @@ img {
 
 @media (max-width: 767px) {
   .products__card {
+    margin: 0 20px 30px 20px;
     max-width: 315px;
     margin-bottom: 30px;
   }
@@ -474,6 +481,42 @@ img {
 .products__addCart:hover {
   color: #fff;
   background-color: #3F5D45;
+}
+
+/* ---- Inpput checkbox ---- */
+.inputCheckbox__label {
+  font-size: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.inputCheckbox__label > input[type="checkbox"] {
+  display: none;
+}
+
+.inputCheckbox__label > input[type="checkbox"]:checked + .inputCheckbox__icon {
+  background-image: url(../img/checkbox_checked.svg);
+  background-repeat: no-repeat;
+}
+
+.inputCheckbox__icon {
+  background-image: url(../img/checkbox.svg);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: sub;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.inputCheckbox__text {
+  padding-left: 8px;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 /* ---- Cutomized spacing ---- */
@@ -684,6 +727,24 @@ img {
   }
 }
 
+.header__paymentSuccess {
+  background-image: url(../img/payment_success.jpg);
+  background-repeat: no-repeat;
+  margin: 0 0 60px 0;
+  width: 100%;
+  height: 460px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .header__paymentSuccess {
+    margin: 84px 0 0 0;
+    height: 518px;
+  }
+}
+
 /* -- subscribe -- */
 .subscribe {
   padding: 30px 122px;
@@ -708,6 +769,7 @@ img {
 .subscribe__titleText {
   font-size: 24px;
   font-weight: normal;
+  line-height: 1.2;
   letter-spacing: 1px;
   color: #EAF0ED;
   margin-left: 20px;
@@ -793,7 +855,7 @@ img {
 }
 
 @media (max-width: 767px) {
-  .footer__rightInfo {
+  .footer__slogan {
     display: none;
   }
 }
@@ -1042,21 +1104,6 @@ img {
 /* ---- subscribe has been imported ---- */
 /* ---- footer has been imported ---- */
 /* ---- Cutomized spacing ---- */
-.products__productsPage .products__list {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.products__productsPage .products__card {
-  margin: 0 0 20px 20px;
-}
-
-@media (max-width: 767px) {
-  .products__productsPage .products__card {
-    margin: 0 0 30px 0;
-  }
-}
-
 .content__productsPage {
   margin-bottom: 60px;
 }
@@ -1068,16 +1115,6 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-}
-
-.pagination {
-  margin-top: 10px;
-}
-
-@media (max-width: 767px) {
-  .pagination {
-    margin-top: 0;
   }
 }
 
@@ -1118,6 +1155,16 @@ img {
 
 /* ---- products has been imported ---- */
 /* ---- pagination ---- */
+.pagination {
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .pagination {
+    margin-top: 0;
+  }
+}
+
 .pagination li a {
   text-align: center;
   width: 100%;
@@ -1346,28 +1393,7 @@ img {
   }
 }
 
-.remember__label {
-  font-size: 0;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.remember__label > input[type="checkbox"] {
-  display: none;
-}
-
-.remember__label > input[type="checkbox"]:checked + .remember__checkbox {
-  background-image: url(../img/checkbox_checked.svg);
-  background-repeat: no-repeat;
-}
-
 .remember__text {
-  font-size: 16px;
-  font-weight: normal;
-  padding-left: 8px;
   color: #8DA291;
 }
 
@@ -1378,16 +1404,7 @@ img {
 }
 
 .remember__checkbox {
-  background-image: url(../img/checkbox.svg);
-  background-repeat: no-repeat;
-  position: relative;
-  width: 16px;
-  height: 16px;
-  vertical-align: sub;
-  display: inline-block;
   border: 1px solid #8DA291;
-  -webkit-transition: all .2s;
-  transition: all .2s;
 }
 
 /* ---- Member hover ---- */
@@ -1862,12 +1879,12 @@ img {
 }
 
 /* ---- Cutomized spacing ---- */
-.content__deliveryPage {
-  margin: 30px 0;
+.content__paymentProcess {
+  margin: 30px 0 60px 0;
 }
 
 @media (max-width: 767px) {
-  .content__deliveryPage {
+  .content__paymentProcess {
     margin: 84px 0 0 0;
   }
 }
@@ -1882,6 +1899,7 @@ img {
   }
 }
 
+/* ---- Payment process input setting ---- */
 .input-half {
   max-width: 186px;
 }
@@ -1969,6 +1987,28 @@ img {
   outline: none;
 }
 
+.orderProcess__inputArea {
+  padding: 0 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .orderProcess__inputArea {
+    padding: 0 30px;
+  }
+}
+
+.orderProcess__inputArea-eInvoice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.orderProcess__inputArea-postInvoice {
+  display: none;
+}
+
 .orderProcess__label {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2022,22 +2062,7 @@ img {
 .orderProcess__titleText {
   font-size: 36px;
   font-weight: 500;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin-right: 8px;
-}
-
-.orderProcess__inputArea {
-  padding: 0 40px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media (max-width: 767px) {
-  .orderProcess__inputArea {
-    padding: 0 30px;
-  }
 }
 
 .orderProcess__labelText {
@@ -2049,9 +2074,23 @@ img {
 }
 
 .orderProcess__processBar {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-preferred-size: 186px;
+      flex-basis: 186px;
+}
+
+@media (max-width: 767px) {
+  .orderProcess__processBar {
+    -ms-flex-preferred-size: 153px;
+        flex-basis: 153px;
+  }
+}
+
+.orderProcess__processBar-success {
+  min-width: 190px;
+  margin-bottom: 30px;
 }
 
 .orderProcess__nextButton {
@@ -2151,4 +2190,101 @@ img {
 .shop__prodPrice {
   font-size: 20px;
   font-weight: 500;
+}
+
+.invoiceSwitch {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 40px 30px 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .invoiceSwitch {
+    margin: 0 30px 30px 30px;
+  }
+}
+
+.invoiceSwitch-e, .invoiceSwitch-post {
+  padding: 14px 0;
+  width: 100%;
+  border: 1px solid #EAF0ED;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.invoiceSwitch-e {
+  color: #3F5D45;
+  background-color: #EAF0ED;
+}
+
+#invoiceToggle {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+#invoiceToggle:checked ~ .orderProcess__inputArea-eInvoice {
+  display: none;
+}
+
+#invoiceToggle:checked ~ .orderProcess__inputArea-postInvoice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#invoiceToggle:checked ~ .invoiceSwitch > .invoiceSwitch-e {
+  color: #EAF0ED;
+  background-color: transparent;
+}
+
+#invoiceToggle:checked ~ .invoiceSwitch > .invoiceSwitch-post {
+  color: #3F5D45;
+  background-color: #EAF0ED;
+}
+
+.paymentSuccess__title {
+  margin-bottom: 50px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #3F5D45;
+}
+
+.paymentSuccess__goToShopping-lg, .paymentSuccess__goToShopping-sm {
+  font-size: 24px;
+  font-weight: 500;
+  min-width: 300px;
+  line-height: 65px;
+  color: #3F5D45;
+  background-color: #FFE180;
+  text-align: center;
+}
+
+.paymentSuccess__goToShopping-lg:hover, .paymentSuccess__goToShopping-sm:hover {
+  background-color: #ffd54d;
+}
+
+.paymentSuccess__goToShopping-lg {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .paymentSuccess__goToShopping-lg {
+    display: none;
+  }
+}
+
+.paymentSuccess__goToShopping-sm {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .paymentSuccess__goToShopping-sm {
+    display: block;
+  }
 }

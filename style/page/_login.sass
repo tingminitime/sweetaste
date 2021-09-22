@@ -94,30 +94,12 @@
       background-color: $lightYellow
 
 .remember
-  &__label
-    font-size: 0
-    cursor: pointer
-    user-select: none
-    > input[type="checkbox"]
-      display: none
-      &:checked
-        & + .remember__checkbox
-          +backgroundImg($checkbox_checked)
   &__text
-    +font(0)
-    padding-left: 8px
     color: $grayGreen
     +pad
       color: $lightGreen
   &__checkbox
-    +backgroundImg($checkbox_uncheck)
-    position: relative
-    width: 16px
-    height: 16px
-    vertical-align: sub
-    display: inline-block
     border: 1px solid $grayGreen
-    transition: all .2s
 
 /* ---- Member hover ---- */
 .login__member

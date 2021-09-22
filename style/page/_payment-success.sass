@@ -1,0 +1,24 @@
+.paymentSuccess
+  &__title
+    margin-bottom: 50px
+    font-family: 'Noto Serif TC', serif
+    +font(8, 500)
+    color: $darkGreen
+  &__goToShopping
+    &-lg,&-sm
+      +font(2, 500)
+      min-width: 300px
+      line-height: 65px
+      color: $darkGreen
+      background-color: $lightYellow
+      text-align: center
+      &:hover
+        background-color: darken($lightYellow, 10%)
+    &-lg
+      display: block
+      +pad
+        display: none
+    &-sm
+      display: none
+      +pad
+        display: block

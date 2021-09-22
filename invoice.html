@@ -11,7 +11,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>Sweetaste - 運送</title>
+  <title>Sweetaste - 發票</title>
   <link
     rel="stylesheet"
     href="style/all.css"
@@ -91,51 +91,59 @@
     <div class="content__paymentProcess flex-center-start">
       <form
         class="orderProcess"
-        action="payment.html"
+        action="payment-success.html"
       >
         <div class="orderProcess__title flex-sb-end">
-          <legend class="orderProcess__titleText">運送</legend>
+          <legend class="orderProcess__titleText">發票</legend>
           <div class="orderProcess__processBar">
             <img
-              src="img/bar_delivery.svg"
+              src="img/bar_invoice.svg"
               alt="process bar"
             >
           </div>
         </div>
-        <fieldset class="orderProcess__inputArea flex-sb">
-          <label class="orderProcess__label orderProcess__label-half">
-            <div class="orderProcess__labelText">姓氏</div>
-            <input
-              type="text"
-              class="orderProcess__input-half"
-              placeholder="王"
-              required
-            >
-          </label>
-          <label class="orderProcess__label orderProcess__label-half">
-            <div class="orderProcess__labelText">名字</div>
-            <input
-              type="text"
-              class="orderProcess__input-half"
-              placeholder="小明"
-              required
-            >
-          </label>
+        <input
+          id="invoiceToggle"
+          type="checkbox"
+        >
+        <label
+          class="invoiceSwitch flex-center"
+          for="invoiceToggle"
+        >
+          <div class="invoiceSwitch-e">電子發票</div>
+          <div class="invoiceSwitch-post">郵寄發票</div>
+        </label>
+        <fieldset class="orderProcess__inputArea orderProcess__inputArea-eInvoice flex-sb">
           <label class="orderProcess__label orderProcess__label-full">
-            <div class="orderProcess__labelText">電話</div>
+            <div class="orderProcess__labelText">電子郵件信箱</div>
             <input
               type="text"
               class="orderProcess__input"
-              placeholder="0912-345-678"
-              required
+              placeholder="example@email.com"
             >
           </label>
-          <label class="orderProcess__label flex-sb">
-            <div class="orderProcess__labelText">地址</div>
-            <select
-              name="city"
-              required
+          <label class="orderProcess__label orderProcess__label-full">
+            <div class="orderProcess__labelText">統一編號 (選填)</div>
+            <input
+              type="text"
+              class="orderProcess__input"
+              placeholder="12345678"
             >
+          </label>
+        </fieldset>
+        <fieldset class="orderProcess__inputArea orderProcess__inputArea-postInvoice flex-sb">
+          <label class="orderProcess__label flex-sb">
+            <div class="orderProcess__labelText flex-sb">
+              <span>地址</span>
+              <div class="inputCheckbox">
+                <label class="inputCheckbox__label">
+                  <input type="checkbox">
+                  <span class="inputCheckbox__icon"></span>
+                  <span class="inputCheckbox__text">同運送地址</span>
+                </label>
+              </div>
+            </div>
+            <select name="city">
               <option
                 value="請選擇"
                 selected
@@ -143,10 +151,7 @@
               <option value="高雄市">高雄市</option>
               <option value="台北市">台北市</option>
             </select>
-            <select
-              name="district"
-              required
-            >
+            <select name="district">
               <option
                 value="請選擇"
                 selected
@@ -158,7 +163,14 @@
               type="text"
               class="orderProcess__input"
               placeholder="幸福路 520 號"
-              required
+            >
+          </label>
+          <label class="orderProcess__label orderProcess__label-full flex-sb">
+            <div class="orderProcess__labelText">統一編號 (選填)</div>
+            <input
+              type="text"
+              class="orderProcess__input"
+              placeholder="12345678"
             >
           </label>
         </fieldset>
