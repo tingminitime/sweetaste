@@ -1919,7 +1919,7 @@ img {
   background-color: #3F5D45;
 }
 
-.orderProcess input[type="text"] {
+.orderProcess input[type="text"], .orderProcess input[type="number"] {
   font-size: 20px;
   font-weight: normal;
   padding: 16px 20px;
@@ -1930,32 +1930,38 @@ img {
   background-color: #EAF0ED;
 }
 
-.orderProcess input[type="text"]::-webkit-input-placeholder {
+.orderProcess input[type="text"]::-webkit-input-placeholder, .orderProcess input[type="number"]::-webkit-input-placeholder {
   font-size: 16px;
   font-weight: 300;
   color: #8DA291;
 }
 
-.orderProcess input[type="text"]:-ms-input-placeholder {
+.orderProcess input[type="text"]:-ms-input-placeholder, .orderProcess input[type="number"]:-ms-input-placeholder {
   font-size: 16px;
   font-weight: 300;
   color: #8DA291;
 }
 
-.orderProcess input[type="text"]::-ms-input-placeholder {
+.orderProcess input[type="text"]::-ms-input-placeholder, .orderProcess input[type="number"]::-ms-input-placeholder {
   font-size: 16px;
   font-weight: 300;
   color: #8DA291;
 }
 
-.orderProcess input[type="text"]::placeholder {
+.orderProcess input[type="text"]::placeholder, .orderProcess input[type="number"]::placeholder {
   font-size: 16px;
   font-weight: 300;
   color: #8DA291;
 }
 
-.orderProcess input[type="text"]:focus {
+.orderProcess input[type="text"]:focus, .orderProcess input[type="number"]:focus {
   outline: 2px solid #FFE180;
+}
+
+.orderProcess input[type="number"]::-webkit-outer-spin-button,
+.orderProcess input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .orderProcess select {
