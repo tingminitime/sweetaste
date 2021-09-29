@@ -1,0 +1,15 @@
+/* ---- vertical title text ---- */
+.verticalTitle
+  writing-mode: vertical-rl
+  font-family: 'Noto Serif TC', serif
+  line-height: 1.5
+  letter-spacing: .2em
+  color: $darkGreen
+  &--sm
+    +font(2)
+  &--lg
+    +font(3)
+    +pad
+      margin: 0 auto
+      writing-mode: horizontal-tb
+      text-align: center

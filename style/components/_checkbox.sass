@@ -1,0 +1,21 @@
+/* ---- Inpput checkbox ---- */
+.inputCheckbox
+  &__label
+    font-size: 0
+    cursor: pointer
+    user-select: none
+    > input[type="checkbox"]
+      display: none
+      &:checked
+        & + .inputCheckbox__icon
+          +backgroundImg($checkbox_checked)
+  &__icon
+    +backgroundImg($checkbox_uncheck)
+    display: inline-block
+    width: 16px
+    height: 16px
+    vertical-align: sub
+    transition: all .2s
+  &__text
+    padding-left: 8px
+    +font(0)

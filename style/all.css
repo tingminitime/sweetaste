@@ -1254,6 +1254,8 @@ img {
 
 @media (max-width: 767px) {
   .login__block {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     background-color: #3F5D45;
     height: auto;
   }
